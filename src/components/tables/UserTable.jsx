@@ -17,10 +17,18 @@ const UserTable = props => (
             <td>{user.username}</td>
             <td className="level">
               <div className="buttons">
-                <button className="button is-link is-hovered is-focused is-active">
+                <button
+                  onClick={() => {
+                    props.editRow(user);
+                  }}
+                  className="button is-link is-hovered is-focused is-active"
+                >
                   Edit
                 </button>
-                <button className="button is-danger is-hovered is-focused is-active">
+                <button
+                  onClick={() => props.deleteUser(user.id)}
+                  className="button is-danger is-hovered is-focused is-active"
+                >
                   Delete
                 </button>
               </div>
