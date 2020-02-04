@@ -62,7 +62,7 @@ const App = () => {
               </Fragment>
             )}
             <div className="column">
-              <div className="box">
+              <div className="box2 box">
                 <div className="title is-4 has-text-centered">View Users</div>
                 <div className="columns">
                   <UserTable
