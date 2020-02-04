@@ -20,8 +20,12 @@ const EditUserForm = props => {
   };
 
   return (
-    <form className="column is-mobile" onSubmit={handleSubmit}>
+    <form
+      className="square columns is-mobile is-centered"
+      onSubmit={handleSubmit}
+    >
       <div className="box">
+        <div className="title is-4 has-text-centered">Edit User</div>
         <div className="level">
           <div className="level-item has-centered">
             <div className="field">

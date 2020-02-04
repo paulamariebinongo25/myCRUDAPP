@@ -19,24 +19,25 @@ const AddUserForm = props => {
   };
 
   return (
-    <form className="column is-mobile" onSubmit={handleSubmit}>
+    <form
+      className="square columns is-mobile is-desktop is-centered"
+      onSubmit={handleSubmit}
+    >
       <div className="box1 box">
-        <div className="level">
-          <div className="level-item has-centered">
-            <div className="field">
-              <label>Name</label>
-              <div className="control">
-                <input
-                  className="input is-black is-normal"
-                  type="text"
-                  name="name"
-                  value={user.name}
-                  onChange={handleInputChange}
-                />
-              </div>
-            </div>
+        <div className="title is-4 has-text-centered">Add User</div>
+        <div className="field">
+          <label>Name</label>
+          <div className="control">
+            <input
+              className="input is-black is-normal"
+              type="text"
+              name="name"
+              value={user.name}
+              onChange={handleInputChange}
+            />
           </div>
         </div>
+
         <div className="level">
           <div className="level-item has-centered">
             <div className="field">

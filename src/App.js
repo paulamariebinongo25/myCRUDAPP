@@ -39,39 +39,35 @@ const App = () => {
     setUsers(users.map(user => (user.id === id ? updatedUser : user)));
   };
   return (
-    <div className="container is-centered">
-      <div className="level">
-        <div className="column">
-          <div className="box">
-            {editing ? (
-              <Fragment>
-                <div className="title is-4 has-text-centered">Edit User</div>
-                <EditUserForm
-                  editing={editing}
-                  setEditing={setEditing}
-                  currentUser={currentUser}
-                  updateUser={updateUser}
-                />
-              </Fragment>
-            ) : (
-              <Fragment>
-                <div className="title is-4 has-text-centered">Add User</div>
-                <div className="columns">
-                  <AddUserForm addUser={addUser} />
-                </div>
-              </Fragment>
-            )}
+    <div className="container">
+      <div className="box">
+        {editing ? (
+          <Fragment>
+            <EditUserForm
+              editing={editing}
+              setEditing={setEditing}
+              currentUser={currentUser}
+              updateUser={updateUser}
+            />
+          </Fragment>
+        ) : (
+          <Fragment>
             <div className="column">
-              <div className="box2 box">
-                <div className="title is-4 has-text-centered">View Users</div>
-                <div className="columns">
-                  <UserTable
-                    users={users}
-                    deleteUser={deleteUser}
-                    editRow={editRow}
-                  />
-                </div>
+              <div className="columns is-mobile is-centered">
+                <AddUserForm addUser={addUser} />
               </div>
+            </div>
+          </Fragment>
+        )}
+        <div className="column">
+          <div className="box2 box">
+            <div className="title is-4 has-text-centered">View Users</div>
+            <div className="columns is-mobile is-centered">
+              <UserTable
+                users={users}
+                deleteUser={deleteUser}
+                editRow={editRow}
+              />
             </div>
           </div>
         </div>
