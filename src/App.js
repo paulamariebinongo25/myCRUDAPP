@@ -5,12 +5,26 @@ import "bulma/css/bulma.css";
 
 import UserTable from "./components/tables/UserTable";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <UserTable />
+    <div className="container is-centered">
+      <div className="level">
+        <div className="column">
+          <div className="box">
+            <span className="title is-4">Add User</span>
+          </div>
+        </div>
+        <div className="column">
+          <div className="box">
+            <div className="title is-4">View Users</div>
+            <div className="columns">
+              <UserTable />
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   );
-}
+};
 
 export default App;
