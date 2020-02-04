@@ -3,6 +3,7 @@ import "./App.css";
 import "bulma/css/bulma.css";
 
 import UserTable from "./components/tables/UserTable";
+import AddUserForm from "./components/forms/AddUserForm";
 
 const App = () => {
   const usersData = [
@@ -12,18 +13,25 @@ const App = () => {
   ];
 
   const [users, setUsers] = useState(usersData);
+  const addUser = user => {
+    user.id = users.length + 1;
+    setUsers([...users, user]);
+  };
 
   return (
     <div className="container is-centered">
       <div className="level">
         <div className="column">
           <div className="box">
-            <span className="title is-4">Add User</span>
+            <div className="title is-4 has-text-centered">Add User</div>
+            <div className="columns">
+              <AddUserForm addUser={addUser} />
+            </div>
           </div>
         </div>
         <div className="column">
           <div className="box">
-            <div className="title is-4">View Users</div>
+            <div className="title is-4 has-text-centered">View Users</div>
             <div className="columns">
               <UserTable users={users} />
             </div>
