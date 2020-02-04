@@ -1,6 +1,6 @@
 import React from "react";
 
-const UserTable = () => (
+const UserTable = props => (
   <table className="table is-bordered is-striped is-narrow is-hoverable is-fullwidth">
     <thead>
       <tr>
@@ -10,20 +10,30 @@ const UserTable = () => (
       </tr>
     </thead>
     <tbody>
-      <tr>
-        <td>Name data</td>
-        <td>Username data</td>
-        <td className="level">
-          <div className="buttons">
-            <button className="button is-link is-hovered is-focused is-active">
-              Edit
-            </button>
-            <button className="button is-danger is-hovered is-focused is-active">
-              Delete
-            </button>
-          </div>
-        </td>
-      </tr>
+      {props.users.length > 0 ? (
+        props.users.map(user => (
+          <tr key={user.id}>
+            <td>{user.name}</td>
+            <td>{user.username}</td>
+            <td className="level">
+              <div className="buttons">
+                <button className="button is-link is-hovered is-focused is-active">
+                  Edit
+                </button>
+                <button className="button is-danger is-hovered is-focused is-active">
+                  Delete
+                </button>
+              </div>
+            </td>
+          </tr>
+        ))
+      ) : (
+        <tr>
+          <td colSpan={3}>
+            <div className="subtitle is-5  has-text-centered">No users</div>
+          </td>
+        </tr>
+      )}
     </tbody>
   </table>
 );
