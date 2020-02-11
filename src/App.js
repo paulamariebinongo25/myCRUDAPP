@@ -2,70 +2,70 @@ import React, { useState, Fragment } from "react";
 import "./App.css";
 import "bulma/css/bulma.css";
 
-import UserTable from "./components/tables/UserTable";
-import AddUserForm from "./components/forms/AddUserForm";
-import EditUserForm from "./components/forms/EditUserForm";
+import ListOfTodoTable from "./components/tables/ListOfTodoTable";
+import AddTodoForm from "./components/forms/AddTodoForm";
+import EditTodoForm from "./components/forms/EditTodoForm";
 
 const App = () => {
-  const usersData = [];
+  const todosData = [];
 
-  const [users, setUsers] = useState(usersData);
+  const [todos, setTodos] = useState(todosData);
 
-  const initialFormState = { id: null, name: "", username: "" };
+  const initialFormState = { id: null, name: "" };
 
-  const [currentUser, setCurrentUser] = useState(initialFormState);
+  const [currentTodo, setCurrentTodo] = useState(initialFormState);
 
   const [editing, setEditing] = useState(false);
 
-  const editRow = user => {
+  const editRow = todo => {
     setEditing(true);
 
-    setCurrentUser({ id: user.id, name: user.name, username: user.username });
+    setCurrentTodo({ id: todo.id, name: todo.name });
   };
 
-  const addUser = user => {
-    user.id = users.length + 1;
-    setUsers([...users, user]);
+  const addTodo = todo => {
+    todo.id = todos.length + 1;
+    setTodos([...todos, todo]);
   };
 
-  const deleteUser = id => {
+  const deleteTodo = id => {
     setEditing(false);
-    setUsers(users.filter(user => user.id !== id));
+    setTodos(todos.filter(todo => todo.id !== id));
   };
 
-  const updateUser = (id, updatedUser) => {
+  const updateTodo = (id, updatedTodo) => {
     setEditing(false);
 
-    setUsers(users.map(user => (user.id === id ? updatedUser : user)));
+    setTodos(todos.map(todo => (todo.id === id ? updatedTodo : todo)));
   };
   return (
     <div className="container">
       <div className="box">
         {editing ? (
           <Fragment>
-            <EditUserForm
+            <EditTodoForm
               editing={editing}
               setEditing={setEditing}
-              currentUser={currentUser}
-              updateUser={updateUser}
+              currentTodo={currentTodo}
+              updateTodo={updateTodo}
             />
           </Fragment>
         ) : (
           <Fragment>
             <div className="column">
               <div className="columns is-mobile is-centered">
-                <AddUserForm addUser={addUser} />
+                <AddTodoForm addTodo={addTodo} />
               </div>
             </div>
           </Fragment>
         )}
         <div className="column">
           <div className="box2 box">
-            <div className="title is-4 has-text-centered">View Users</div>
+            <div className="title is-4 has-text-centered">View Todos</div>
             <div className="columns is-mobile is-centered">
-              <UserTable
-                users={users}
-                deleteUser={deleteUser}
+              <ListOfTodoTable
+                todos={todos}
+                deleteTodo={deleteTodo}
                 editRow={editRow}
               />
             </div>

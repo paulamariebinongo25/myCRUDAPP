@@ -1,22 +1,22 @@
 import React, { useState, useEffect } from "react";
 
-const EditUserForm = props => {
-  const [user, setUser] = useState(props.currentUser);
+const EditTodoForm = props => {
+  const [todo, setTodo] = useState(props.currentTodo);
 
   useEffect(() => {
-    setUser(props.currentUser);
+    setTodo(props.currentTodo);
   }, [props]);
 
   const handleInputChange = e => {
     const { name, value } = e.target;
 
-    setUser({ ...user, [name]: value });
+    setTodo({ ...todo, [name]: value });
   };
 
   const handleSubmit = e => {
     e.preventDefault();
 
-    props.updateUser(user.id, user);
+    props.updateTodo(todo.id, todo);
   };
 
   return (
@@ -25,7 +25,7 @@ const EditUserForm = props => {
       onSubmit={handleSubmit}
     >
       <div className="box">
-        <div className="title is-4 has-text-centered">Edit User</div>
+        <div className="title is-4 has-text-centered">Edit todo</div>
         <div className="level">
           <div className="level-item has-centered">
             <div className="field">
@@ -35,7 +35,7 @@ const EditUserForm = props => {
                   className="input is-black is-normal"
                   type="text"
                   name="name"
-                  value={user.name}
+                  value={todo.name}
                   onChange={handleInputChange}
                 />
               </div>
@@ -43,29 +43,29 @@ const EditUserForm = props => {
           </div>
         </div>
 
-        <div className="level">
+        {/* <div className="level">
           <div className="level-item has-centered">
             <div className="field">
-              <label>Username</label>
+              <label>todoname</label>
               <div className="control">
                 <input
                   className="input is-black is-normal"
                   type="text"
-                  name="username"
-                  value={user.username}
+                  name="todoname"
+                  value={todo.todoname}
                   onChange={handleInputChange}
                 />
               </div>
             </div>
           </div>
-        </div>
+        </div> */}
         <div className="level">
           <div className="level-item has-centered">
             <div className="field">
               <div className="control">
                 <div className="buttons">
                   <button className="button is-rounded is-black">
-                    Edit User
+                    Edit Todo
                   </button>
                   <button
                     onClick={() => props.setEditing(false)}
@@ -83,4 +83,4 @@ const EditUserForm = props => {
   );
 };
 
-export default EditUserForm;
+export default EditTodoForm;
