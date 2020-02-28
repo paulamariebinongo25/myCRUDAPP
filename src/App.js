@@ -17,7 +17,7 @@ const App = () => {
     localStorage.setItem("todos", JSON.stringify(todos));
   }, [todos]);
 
-  const initialFormState = { id: null, name: "" };
+  const initialFormState = { id: new Date().getTime(), name: "" };
 
   const [currentTodo, setCurrentTodo] = useState(initialFormState);
 

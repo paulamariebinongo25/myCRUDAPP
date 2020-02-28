@@ -24,8 +24,8 @@ const ListOfTodoTable = props => (
                     }}
                     className="button is-link is-hovered is-focused is-active"
                   >
-                    <span class="icon is-left">
-                      <i class="fas fa-pen"></i>
+                    <span className="icon is-left">
+                      <i className="fas fa-pen"></i>
                     </span>
                     <span>Edit</span>
                   </button>
@@ -33,8 +33,8 @@ const ListOfTodoTable = props => (
                     onClick={() => props.deleteTodo(todo.id)}
                     className="button is-danger is-hovered is-focused is-active"
                   >
-                    <span class="icon is-left">
-                      <i class="fas fa-trash"></i>
+                    <span className="icon is-left">
+                      <i className="fas fa-trash"></i>
                     </span>
                     <span>Delete</span>
                   </button>
