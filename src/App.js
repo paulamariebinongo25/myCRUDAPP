@@ -1,4 +1,4 @@
-import React, { useState, Fragment } from "react";
+import React, { useState, Fragment, useEffect } from "react";
 import "./App.css";
 import "bulma/css/bulma.css";
 
@@ -7,9 +7,15 @@ import AddTodoForm from "./components/forms/AddTodoForm";
 import EditTodoForm from "./components/forms/EditTodoForm";
 
 const App = () => {
-  const todosData = [];
+  const initialTodos = localStorage.getItem("todos")
+    ? JSON.parse(localStorage.getItem("todos"))
+    : [];
 
-  const [todos, setTodos] = useState(todosData);
+  const [todos, setTodos] = useState(initialTodos);
+
+  useEffect(() => {
+    localStorage.setItem("todos", JSON.stringify(todos));
+  }, [todos]);
 
   const initialFormState = { id: null, name: "" };
 
