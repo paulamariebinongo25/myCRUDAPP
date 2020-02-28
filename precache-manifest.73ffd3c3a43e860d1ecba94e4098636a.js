@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "00e32a007630a5e182d7f01eee146446",
+    "revision": "3cc20f8e9fbe11a0396a08709546add4",
     "url": "/myCRUDAPP/index.html"
   },
   {
@@ -8,7 +8,7 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/myCRUDAPP/static/css/2.c4418c31.chunk.css"
   },
   {
-    "revision": "92a68298189b0cf55ec2",
+    "revision": "d6430d869a165f5fb5df",
     "url": "/myCRUDAPP/static/css/main.68ff730a.chunk.css"
   },
   {
@@ -20,8 +20,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/myCRUDAPP/static/js/2.942bc7ea.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "92a68298189b0cf55ec2",
-    "url": "/myCRUDAPP/static/js/main.ed83916d.chunk.js"
+    "revision": "d6430d869a165f5fb5df",
+    "url": "/myCRUDAPP/static/js/main.a50f8749.chunk.js"
   },
   {
     "revision": "0220ee39ed8fca4f65c1",

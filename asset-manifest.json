@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/myCRUDAPP/static/css/main.68ff730a.chunk.css",
-    "main.js": "/myCRUDAPP/static/js/main.ed83916d.chunk.js",
-    "main.js.map": "/myCRUDAPP/static/js/main.ed83916d.chunk.js.map",
+    "main.js": "/myCRUDAPP/static/js/main.a50f8749.chunk.js",
+    "main.js.map": "/myCRUDAPP/static/js/main.a50f8749.chunk.js.map",
     "runtime-main.js": "/myCRUDAPP/static/js/runtime-main.fe591166.js",
     "runtime-main.js.map": "/myCRUDAPP/static/js/runtime-main.fe591166.js.map",
     "static/css/2.c4418c31.chunk.css": "/myCRUDAPP/static/css/2.c4418c31.chunk.css",
     "static/js/2.942bc7ea.chunk.js": "/myCRUDAPP/static/js/2.942bc7ea.chunk.js",
     "static/js/2.942bc7ea.chunk.js.map": "/myCRUDAPP/static/js/2.942bc7ea.chunk.js.map",
     "index.html": "/myCRUDAPP/index.html",
-    "precache-manifest.511fd274d77732f7c9be299e459f89c1.js": "/myCRUDAPP/precache-manifest.511fd274d77732f7c9be299e459f89c1.js",
+    "precache-manifest.73ffd3c3a43e860d1ecba94e4098636a.js": "/myCRUDAPP/precache-manifest.73ffd3c3a43e860d1ecba94e4098636a.js",
     "service-worker.js": "/myCRUDAPP/service-worker.js",
     "static/css/2.c4418c31.chunk.css.map": "/myCRUDAPP/static/css/2.c4418c31.chunk.css.map",
     "static/css/main.68ff730a.chunk.css.map": "/myCRUDAPP/static/css/main.68ff730a.chunk.css.map",
@@ -20,6 +20,6 @@
     "static/css/2.c4418c31.chunk.css",
     "static/js/2.942bc7ea.chunk.js",
     "static/css/main.68ff730a.chunk.css",
-    "static/js/main.ed83916d.chunk.js"
+    "static/js/main.a50f8749.chunk.js"
   ]
 }
